@@ -1,0 +1,54 @@
+Komutlar:
+pwd	: bulunduğumuz konumu gösterir
+cd '<dosya yolu>'	: istediğimiz dizine konumlanmamızı sağlar'
+
+GIT BASH UZERİNDEN YAPILACAKLAR:
+
+1-
+Git Bash kurulduktan sonra kullanıcı bilgilerimizi giriyoruz.
+
+git config --global user.name "Caner Mollaoğlu"
+git config --global user.email "canermollaoglu@hotmail.com"
+
+2-
+Git versiyon kontrol sistemini hangi klasöre (projeye) entegre etmek istiyorsam o dizine konumlanmam gerekiyor.
+
+3-
+Projeye git versiyon kontrol sistemini eklemek için 
+git init komutu çalıştırılır.
+
+4-
+Versiyonlayarak kontrol etmek istediğimiz tüm dosyalarımızı staging area'ya kaydederiz.
+
+git add bilgi.txt < tek tek kayıt >
+git add .  <dizinde bulunan tüm dosyaları ekler>
+
+5-
+Bazen dizinde bulunan tüm dosyaları staging area'ya eklemek istemeyiz. Bazı kutuphaneler, proje dosyaları, gizli bilgi içeren dosyalar vs. Bu durumda .gitignore dosyası oluşturulur. Bu dosya içerisine aşağıdaki linkler üzerinden alınan uygun gitignore komutları yazılır.
+https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
+https://github.com/github/gitignore/blob/main/Android.gitignore
+
+Ancak istersek .gitignore içerisine direkt olarak dosya adı ve uzantısı yazarak bu dosyanın versiyonlanmasını engelleyebiliriz.
+
+6-
+git status
+Versiyon kontrolu yapılan dosyalar üzerinde olan değişiklikleri gösterir.
+
+7-
+git log
+Yapılan tüm commitlerin listesini verir.
+
+GITHUB'A AKTARIM
+Oluşturduğumuz yukarıdaki projenin github'a gönderilmesi.
+
+8-
+Github üzerinde bir repository oluşturduk ve repo adresimizi aldık.
+https://github.com/canermollaoglu/YetenekBasaksehir.git
+
+9-
+Remote Repository mize bir isim verdik. (origin)
+git remote add origin https://github.com/canermollaoglu/YetenekBasaksehir.git
+
+10-
+git push -u origin master
+Bu işlemi yapmak için github'a login olarak izin verilmesi gerekmektedir. İzin işlemi tamamlandıktan sonra local repository de bulunan projemiz Remote Repository'e atılmış olacaktır.
